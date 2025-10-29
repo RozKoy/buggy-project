@@ -1,39 +1,33 @@
-<!-- Navbar -->
-<header x-data="{ open: false }" class="text-[#C8A565] fixed left-0 right-0 xl:h-32 text-lg lg:text-2xl font-bold z-20 px-6 md:px-12 py-4 flex flex-wrap items-center justify-between backdrop-blur bg-white/40">
-    <!-- Logo -->
-    <a href="{{ url('/') }}" class="basis-auto lg:basis-full xl:basis-auto flex items-center space-x-2 font-bold">
-        <img src="{{ asset('media/general/logo.svg') }}" alt="Logo" class="w-[60px] object-cover" />
-        <span>Buggy <br> Bali Adventure</span>
+<header x-data="{ open: false }" class="fixed left-0 right-0 z-50 flex flex-wrap items-center justify-between px-6 py-4 lg:py-6 bg-black/5 backdrop-blur-xl font-bold text-base sm:text-lg lg:text-xl xl:text-2xl text-[#C8A565]">
+    <a href="{{ route('home') }}" class="basis-auto flex items-center space-x-2 font-bold hover:text-white transition">
+        <img src="{{ asset('media/general/logo.svg') }}" alt="Logo" class="w-12 sm:w-14 lg:w-16 xl:w-20" />
+        <span>Buggy Bali <br> Adventure</span>
     </a>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden lg:flex items-center space-x-8">
-        <a href="{{ url('utv-packages') }}" class="hover">UTV Packages</a>
-        <a href="{{ url('activity-packages') }}" class="hover">Activity Packages</a>
-        <a href="{{ url('gallery') }}" class="hover">Gallery</a>
-        <a href="{{ url('aboutus') }}" class="hover">About Us</a>
+    <nav class="hidden lg:flex items-center gap-6 xl:gap-10">
+        <a href="{{ route('utv-packages') }}" class="hover:text-white transition">UTV Packages</a>
+        <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a>
+        <a href="{{ route('gallery') }}" class="hover:text-white transition">Gallery</a>
+        <a href="{{ route('about-us') }}" class="hover:text-white transition">About Us</a>
     </nav>
 
-    <!-- Desktop Button -->
-    <a href="#" class="hidden lg:inline-flex items-center justify-center px-6 py-2 border border-[#C8A565] w-[237px] h-[60px] rounded-[65%] font-semibold hover:bg-[#C8A565] hover:text-white transition">
+    <a href="#" class="group hidden lg:flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">
         <i class="fa-solid fa-location-dot mx-2"></i>
-        <span class="text-white">FIND US</span>
+        <span class="text-white group-hover:text-[#C8A565] transition">FIND US</span>
     </a>
 
-    <!-- Mobile Menu Button -->
-    <button @click="open = !open" class="lg:hidden focus:outline-none">
+    <button @click="open = !open" class="lg:hidden">
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Mobile Dropdown -->
-    <nav x-show="open" x-transition class="lg:hidden w-full bg-black/40 flex flex-col items-center space-y-4 my-4 py-6 z-10">
-        <a href="{{ url('utv-packages') }}" class="hover">UTV Packages</a>
-        <a href="{{ url('activity-packages') }}" class="hover">Activity Packages</a>
-        <a href="{{ url('gallery') }}" class="hover">Gallery</a>
-        <a href="{{ url('aboutus') }}" class="hover">About Us</a>
-        <a href="#" class="inline-flex items-center justify-center px-6 py-2 border border-[#C8A565] w-[180px] h-[50px] rounded-[65%] font-semibold hover:bg-[#C8A565] hover:text-white transition">
+    <nav x-show="open" x-transition class="lg:hidden w-full flex flex-col items-center gap-4 mt-4 p-4 rounded-lg backdrop-blur">
+        <a href="{{ route('utv-packages') }}" class="hover:text-white transition">UTV Packages</a>
+        <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a>
+        <a href="{{ route('gallery') }}" class="hover:text-white transition">Gallery</a>
+        <a href="{{ route('about-us') }}" class="hover:text-white transition">About Us</a>
+        <a href="#" class="group flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">
             <i class="fa-solid fa-location-dot mx-2"></i>
-            <span class="text-white">FIND US</span>
+            <span class="text-white group-hover:text-[#C8A565] transition">FIND US</span>
         </a>
     </nav>
 </header>
