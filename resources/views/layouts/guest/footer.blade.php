@@ -1,32 +1,26 @@
-<footer class="text-base lg:text-xl py-12">
-    <div class="text-center mb-20">
-        <h2 class="text-[24px] lg:text-[32px] font-bold text-[#C8A565]">
-            Visit Our Adventure Base
-        </h2>
-    </div>
+<footer class="max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 py-10 space-y-10 xl:space-y-12">
+    <h2 class="font-bold text-2xl sm:text-3xl xl:text-4xl text-center text-[#C8A565]">
+        Visit Our Adventure Base
+    </h2>
 
-    <div class="px-14 md:px-36 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
 
-        <!-- Logo & Description -->
-        <div>
-            <div class="flex flex-wrap items-center space-x-3 mb-4">
-                <img src="{{ asset('media/general/logo.svg') }}" alt="Logo" class="w-30 h-30 object-cover" />
-                <h2 class="text-2xl lg:text-4xl font-bold text-[#C8A565]">
-                    Buggy Bali
-                    <br>
-                    Adventure
+        <div class="flex flex-col gap-5 sm:col-span-2 xl:col-span-1">
+            <div class="flex flex-wrap items-center gap-3">
+                <img src="{{ asset('media/general/logo.svg') }}" alt="Logo" class="w-16 sm:w-20 xl:w-24" />
+                <h2 class="font-bold text-2xl/tight sm:text-3xl/tight xl:text-4xl/tight text-[#C8A565]">
+                    Buggy Bali <br> Adventure
                 </h2>
             </div>
-            <p>
+            <p class="text-sm sm:text-base lg:text-lg xl:text-xl">
                 Experience 7 km of adrenaline on Bali’s only private buggy track; mud, rice fields, caves, jungle, and speed circuits. Ride solo or tandem with safety guides, then refresh with a river bath in a natural canyon.
             </p>
         </div>
 
-        <!-- Contact Us -->
-        <div class="flex flex-col items-center">
-            <h3 class="text-2xl lg:text-4xl font-semibold text-[#C8A565] mb-4">Contact Us</h3>
-            <ul class="space-y-3 font-bold">
-                <li class="flex flex-wrap lg:flex-nowrap justify-between items-center space-x-6">
+        <div class="flex flex-col items-center gap-3 sm:gap-6 mt-8 md:mt-12">
+            <h3 class="font-semibold text-2xl sm:text-3xl xl:text-4xl text-[#C8A565]">Contact Us</h3>
+            <ul class="space-y-2 md:space-y-3 font-bold text-sm sm:text-base lg:text-lg xl:text-xl">
+                <li class="flex justify-between items-center gap-3 xl:gap-4">
                     <span>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="30" height="30" fill="url(#pattern0_631_1353)" />
@@ -40,7 +34,7 @@
                     </span>
                     <span>+6285337284090</span>
                 </li>
-                <li class="flex justify-between items-center space-x-6">
+                <li class="flex justify-between items-center gap-3 xl:gap-4">
                     <span>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="30" height="30" fill="url(#pattern0_631_1352)" />
@@ -54,7 +48,7 @@
                     </span>
                     <span>+6285337284090</span>
                 </li>
-                <li class="flex text-wrap justify-between space-x-6">
+                <li class="flex justify-between items-start gap-3 xl:gap-4">
                     <span>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="30" height="30" fill="url(#pattern0_631_1354)" />
@@ -71,11 +65,10 @@
             </ul>
         </div>
 
-        <!-- Follow Us -->
-        <div class="flex flex-col items-center">
-            <h3 class="text-2xl lg:text-4xl font-semibold text-[#C8A565] mb-4">Follow Us</h3>
-            <ul class="space-y-3 font-bold">
-                <li class="flex justify-between items-center space-x-6">
+        <div class="flex flex-col items-center gap-3 sm:gap-6 mt-8 md:mt-12">
+            <h3 class="font-semibold text-2xl sm:text-3xl xl:text-4xl text-[#C8A565]">Follow Us</h3>
+            <ul class="space-y-2 md:space-y-3 font-bold text-sm sm:text-base lg:text-lg xl:text-xl">
+                <li class="flex justify-between items-center gap-3 xl:gap-4">
                     <span>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="30" height="30" fill="url(#pattern0_631_1349)" />
@@ -89,7 +82,7 @@
                     </span>
                     <span>@buggybaliadventure</span>
                 </li>
-                <li class="flex justify-between items-center space-x-6">
+                <li class="flex justify-between items-center gap-3 xl:gap-4">
                     <span>
                         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="30" height="30" fill="url(#pattern0_631_1350)" />
@@ -106,12 +99,10 @@
             </ul>
         </div>
 
-        <!-- Our Location -->
-        <div class="flex flex-col items-center">
-            <h3 class="text-2xl lg:text-4xl font-semibold text-[#C8A565] mb-4">Our Location</h3>
-            <div class="w-8/12 aspect-square rounded-3xl overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505148.5912005096!2d114.74074021073775!3d-8.453261306288473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali!5e0!3m2!1sid!2sid!4v1759506293783!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
-                </iframe>
+        <div class="flex flex-col items-center gap-3 sm:gap-6 mt-8 md:mt-12 sm:col-span-2 xl:col-span-1">
+            <h3 class="font-semibold text-2xl sm:text-3xl xl:text-4xl text-[#C8A565]">Our Location</h3>
+            <div class="w-full xl:w-60 aspect-video xl:aspect-square rounded-3xl xl:rounded-[20%] overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.427681128838!2d115.24687837606477!3d-8.554807786748459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23db0a14439a9%3A0xdf0cc6ea0aca4f4f!2sBuggy%20Bali%20Adventure!5e0!3m2!1sid!2sid!4v1761832435578!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
             </div>
         </div>
     </div>
