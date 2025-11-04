@@ -36,7 +36,7 @@
 @endphp
 
 @section('content')
-    <x-hero-image image="{{ asset('media/element/home.svg') }}" alt="Buggy Ride">
+    <x-hero-image image="{{ asset('media/element/home.png') }}" alt="Buggy Ride">
         <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto md:mt-80 gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
             <h1 class="font-extrabold text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                 Bali’s Most Exciting
