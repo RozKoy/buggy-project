@@ -12,7 +12,7 @@
             <a href="{{ route('about-us') }}" class="hover:text-white transition">About Us</a>
         </nav>
 
-        <a href="#" class="group hidden lg:flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">
+        <a href="{{ route('find-us') }}" class="group hidden lg:flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">
             <i class="fa-solid fa-location-dot mx-2"></i>
             <span class="text-white group-hover:text-[#C8A565] transition">FIND US</span>
         </a>
@@ -26,7 +26,7 @@
             <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a>
             <a href="{{ route('gallery') }}" class="hover:text-white transition">Gallery</a>
             <a href="{{ route('about-us') }}" class="hover:text-white transition">About Us</a>
-            <a href="#" class="group flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">
+            <a href="{{ route('find-us') }}" class="group flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">
                 <i class="fa-solid fa-location-dot mx-2"></i>
                 <span class="text-white group-hover:text-[#C8A565] transition">FIND US</span>
             </a>
