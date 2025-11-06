@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'guest.home.index')->name('home');
+Route::get('/', [LandingController::class, 'home'])->name('home');
 Route::view('utv-packages', 'guest.utv_packages.index')->name('utv-packages');
 Route::view('activity-packages', 'guest.activity_packages.index')->name('activity-packages');
 Route::view('gallery', 'guest.galleries.index')->name('gallery');

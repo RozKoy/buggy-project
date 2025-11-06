@@ -1,40 +1,5 @@
 @extends('layouts.guest.app')
 
-@php
-    $collections = collect([
-        // [
-        //     'title' => 'Single ATV + Rafting',
-        //     'description' => 'Rafting — Ride solo on 1 ATV + 1 rafting pack (for 1 person)',
-        //     'img' => 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/2c/14.jpg',
-        // ],
-        // [
-        //     'title' => 'Tandem ATV + Rafting',
-        //     'description' => '2 people on 1 ATV + 2 rafting packs',
-        //     'img' => 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/2c/14.jpg',
-        // ],
-        // [
-        //     'title' => 'Single ATV 300 CC + Rafting',
-        //     'description' => 'Powerful solo ride (300cc) + 1 rafting pack',
-        //     'img' => 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/2c/14.jpg',
-        // ],
-        // [
-        //     'title' => 'Tandem ATV 300 CC + Rafting',
-        //     'description' => '300cc ride for 2 + 2 rafting packs',
-        //     'img' => 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/2c/14.jpg',
-        // ],
-        // [
-        //     'title' => 'Single ATV + Tubing',
-        //     'description' => '1 ATV for 1 person + 1 tubing pack',
-        //     'img' => 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/2c/14.jpg',
-        // ],
-        // [
-        //     'title' => 'Tandem ATV + Tubing',
-        //     'description' => '1 ATV for 2 people + 2 tubing packs',
-        //     'img' => 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/2c/14.jpg',
-        // ],
-    ]);
-@endphp
-
 @section('content')
     <x-hero-image image="{{ asset('media/element/home.png') }}" alt="Buggy Ride">
         <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto md:mt-80 gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
@@ -55,52 +20,90 @@
         </p>
     </div>
 
-    <div id="default-carousel" class="relative w-full" data-carousel="static">
-        <div class="relative h-60 overflow-hidden rounded-lg md:h-72">
-            @for ($i = 0; $i < 5; $i++)
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <div class="hidden xl:flex w-full h-full items-center gap-8 px-20">
-                        @for ($j = 0; $j < 4; $j++)
-                            <div class="flex-1 rounded-xl overflow-hidden">
-                                <img src="{{ $j % 2 === 0 ? asset('media/element/bg-utv-packages.png') : asset('media/element/bg-activity-packages.png') }}" class="object-cover" alt="...">
+    @if ($galleries->count())
+        <div class="relative w-full max-w-screen-2xl mx-auto overflow-hidden" x-data="{
+            items: {{ json_encode($galleries) }},
+            currentSlide: 0,
+            perPage: 4,
+            visibleChunks: [],
+
+            init() {
+                this.updatePerPage();
+                window.addEventListener('resize', this.updatePerPage.bind(this));
+            },
+
+            updatePerPage() {
+                const w = window.innerWidth;
+                if (w >= 1280) this.perPage = 4;
+                else if (w >= 1024) this.perPage = 3;
+                else if (w >= 768) this.perPage = 2;
+                else this.perPage = 1;
+
+                this.chunkItems();
+            },
+
+            chunkItems() {
+                this.visibleChunks = [];
+                for (let i = 0; i < this.items.length; i += this.perPage) {
+                    this.visibleChunks.push(this.items.slice(i, i + this.perPage));
+                }
+
+                if (this.currentSlide >= this.visibleChunks.length) {
+                    this.currentSlide = 0;
+                }
+            },
+
+            next() {
+                if (this.currentSlide < this.visibleChunks.length - 1) {
+                    this.currentSlide++;
+                } else {
+                    this.currentSlide = 0;
+                }
+            },
+
+            prev() {
+                if (this.currentSlide > 0) {
+                    this.currentSlide--;
+                } else {
+                    this.currentSlide = this.visibleChunks.length - 1;
+                }
+            },
+        }" x-init="init()">
+            <div class="flex transition-transform duration-500 ease-in-out" :style="`transform: translateX(-${currentSlide * 100}%);`">
+                <template x-for="(chunk, index) in visibleChunks" :key="index">
+                    <div class="w-full flex-shrink-0 grid gap-4 px-4" :class="{
+                        'grid-cols-1': perPage === 1,
+                        'grid-cols-2': perPage === 2,
+                        'grid-cols-3': perPage === 3,
+                        'grid-cols-4': perPage === 4
+                    }">
+
+                        <template x-for="item in chunk" :key="item.id">
+                            <div class="bg-white/25 shadow rounded overflow-hidden">
+                                <img :src="item.image" class="w-full h-48 object-cover">
                             </div>
-                        @endfor
+                        </template>
                     </div>
-                    <div class="hidden lg:flex xl:hidden w-full h-full items-center gap-8 px-20">
-                        @for ($j = 0; $j < 3; $j++)
-                            <div class="flex-1 rounded-xl overflow-hidden">
-                                <img src="{{ $j % 2 === 0 ? asset('media/element/bg-utv-packages.png') : asset('media/element/bg-activity-packages.png') }}" class="object-cover" alt="...">
-                            </div>
-                        @endfor
-                    </div>
-                    <div class="hidden md:flex lg:hidden w-full h-full items-center gap-8 px-20">
-                        @for ($j = 0; $j < 2; $j++)
-                            <div class="flex-1 rounded-xl overflow-hidden">
-                                <img src="{{ $j % 2 === 0 ? asset('media/element/bg-utv-packages.png') : asset('media/element/bg-activity-packages.png') }}" class="object-cover" alt="...">
-                            </div>
-                        @endfor
-                    </div>
-                    <img src="{{ $i % 2 === 0 ? asset('media/element/bg-utv-packages.png') : asset('media/element/bg-activity-packages.png') }}" class="absolute block md:hidden w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-            @endfor
+                </template>
+            </div>
+            <button @click="prev()" class="absolute left-0 top-1/2 -translate-y-1/2 group">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button @click="next()" class="absolute right-0 top-1/2 -translate-y-1/2 group">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
         </div>
-        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-                </svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                </svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
+    @endif
 
     <div class="w-full max-w-screen-2xl mx-auto relative flex flex-col items-center justify-center px-6 py-14 lg:py-20 gap-10 md:gap-16">
         <p class="px-6 sm:px-12 md:px-14 lg:px-20 xl:px-28 !leading-normal sm:!leading-relaxed lg:!leading-loose text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -217,10 +220,10 @@
         </div>
     </div>
 
-    @if ($collections->count())
+    @if ($packages->count())
         <div id="book" class="w-full max-w-screen-2xl mx-auto grid md:grid-cols-2 py-14 lg:py-20 justify-items-center">
-            @foreach ($collections as $key => $item)
-                <x-card-product type_card="{{ $key % 2 == 0 ? 'left' : 'right' }}" img="{{ $item['img'] }}" alt_img="Buggy Adventure" title="{{ $item['title'] }}" description="{{ $item['description'] }}" url="#" />
+            @foreach ($packages as $key => $item)
+                <x-card-product type_card="{{ $key % 2 == 0 ? 'left' : 'right' }}" img="{{ $item['image'] }}" alt_img="Buggy Adventure" title="{{ $item['name'] }}" description="{{ $item['spec'] }}" url="#" />
             @endforeach
         </div>
     @endif
