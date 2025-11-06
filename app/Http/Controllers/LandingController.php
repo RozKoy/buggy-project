@@ -11,10 +11,19 @@ class LandingController extends Controller
     public function home()
     {
         $packages = BuggyPackage::query()->latest()->limit(6)->get();
-        $galleries = Gallery::latest()->get();
+        $galleries = Gallery::query()->latest()->limit(6)->get();
 
         return view('guest.home.index', [
             'packages' => $packages,
+            'galleries' => $galleries,
+        ]);
+    }
+
+    public function gallery()
+    {
+        $galleries = Gallery::latest()->get();
+
+        return view('guest.galleries.index', [
             'galleries' => $galleries,
         ]);
     }
