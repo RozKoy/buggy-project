@@ -19,6 +19,24 @@ class LandingController extends Controller
         ]);
     }
 
+    public function utv()
+    {
+        $packages = BuggyPackage::query()->where('type', 1)->latest()->get();
+
+        return view('guest.utv_packages.index', [
+            'packages' => $packages,
+        ]);
+    }
+
+    public function atv()
+    {
+        $packages = BuggyPackage::query()->where('type', 2)->latest()->get();
+
+        return view('guest.activity_packages.index', [
+            'packages' => $packages,
+        ]);
+    }
+
     public function gallery()
     {
         $galleries = Gallery::latest()->get();
