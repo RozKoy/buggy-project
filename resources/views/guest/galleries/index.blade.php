@@ -21,12 +21,12 @@
                 <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-center">
                     Discover the highlights of our buggy adventure through photos.
                 </p>
-                <img x-bind:src="preview.image" alt="" srcset="" class="mx-auto w-11/12 md:w-8/12">
+                <img x-bind:src="`/storage/${preview.image}`" alt="" srcset="" class="mx-auto w-11/12 md:w-8/12">
             </div>
             <div class="w-full max-w-screen-2xl mx-auto flex flex-wrap justify-center items-center gap-5 pb-14 lg:pb-20">
 
                 <template x-for="item in items">
-                    <a href="#preview" x-bind:class="`w-80 aspect-video bg-no-repeat bg-cover bg-center ${item.id === preview.id ? 'border-4 border-[#C8A565]' : ''}`" x-bind:style="`background-image: url('${item.image}')`" x-on:click="preview = item">
+                    <a href="#preview" x-bind:class="`w-80 aspect-video bg-no-repeat bg-cover bg-center ${item.id === preview.id ? 'border-4 border-[#C8A565]' : ''}`" x-bind:style="`background-image: url('/storage/${item.image}')`" x-on:click="preview = item">
                     </a>
                 </template>
 

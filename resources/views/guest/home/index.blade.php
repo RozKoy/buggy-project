@@ -80,7 +80,7 @@
 
                         <template x-for="item in chunk" :key="item.id">
                             <div class="bg-white/25 shadow rounded overflow-hidden">
-                                <img :src="item.image" class="w-full h-48 object-cover">
+                                <img x-bind:src="`/storage/${item.image}`" class="w-full h-48 object-cover">
                             </div>
                         </template>
                     </div>
