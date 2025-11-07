@@ -37,6 +37,20 @@ class LandingController extends Controller
         ]);
     }
 
+    public function detail(string $id)
+    {
+        $phone_number = env('APP_PHONE_NUMBER');
+
+        $package = BuggyPackage::findOrFail($id);
+        $galleries = Gallery::query()->latest()->limit(6)->get();
+
+        return view('guest.detail_package.index', [
+            'package' => $package,
+            'galleries' => $galleries,
+            'phone_number' => $phone_number,
+        ]);
+    }
+
     public function gallery()
     {
         $galleries = Gallery::latest()->get();

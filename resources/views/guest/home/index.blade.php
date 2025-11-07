@@ -223,7 +223,7 @@
     @if ($packages->count())
         <div id="book" class="w-full max-w-screen-2xl mx-auto grid md:grid-cols-2 py-14 lg:py-20 justify-items-center">
             @foreach ($packages as $key => $item)
-                <x-card-product type_card="{{ $key % 2 == 0 ? 'left' : 'right' }}" img="/storage/{{ $item['image'] }}" alt_img="Buggy Adventure" title="{{ $item['name'] }}" description="{{ $item['spec'] }}" url="#" />
+                <x-card-product type_card="{{ $key % 2 == 0 ? 'left' : 'right' }}" img="/storage/{{ $item['image'] }}" alt_img="Buggy Adventure" title="{{ $item['name'] }}" description="{{ $item['spec'] }}" url="{{ route('detail', ['id' => $item['id']]) }}" />
             @endforeach
         </div>
     @endif
