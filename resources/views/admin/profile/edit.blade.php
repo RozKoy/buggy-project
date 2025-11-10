@@ -29,14 +29,14 @@
 </x-app-layout> --}}
 @extends('layouts.admin.app')
 @section('content')
-  <!-- Breadcrumb -->
-  <x-breadcrumb :breadcrumbs="[['title' => 'Home', 'url' => '#'], ['title' => 'Profile', 'url' => '#']]" />
-  <!-- Display Success Message -->
-  @if (session('success'))
-    <x-alert variant="success">{{ session('success') }} </x-alert>
-  @endif
-  <!-- Content -->
-  @include('admin.profile.partials.update-profile-information-form')
-  <div class="my-8"></div>
-  @include('admin.profile.partials.update-password-form')
-  @endsection
+    <!-- Breadcrumb -->
+    <x-breadcrumb :breadcrumbs="[['title' => 'Home', 'url' => '#'], ['title' => 'Profile', 'url' => '#']]" />
+    <!-- Display Success Message -->
+    @if (session('success'))
+        <x-alert variant="success">{{ session('success') }} </x-alert>
+    @endif
+    <!-- Content -->
+    @include('admin.profile.partials.update-profile-information-form')
+    <div class="my-8"></div>
+    @include('admin.profile.partials.update-password-form')
+@endsection
