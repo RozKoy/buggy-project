@@ -85,7 +85,11 @@ class UTVController extends Controller
     public function destroy(string $id)
     {
         $utv = BuggyPackage::findOrFail($id);
-        $utv->delete();
+        $filePath = $utv->image;    
+        if (Storage::disk('public')->exists($filePath)) {            
+            Storage::disk('public')->delete($filePath);
+        }        
+        $utv->forceDelete();
 
         return redirect()->route('admin.utv.index')->with('success', 'UTV package deleted successfully!');
     }

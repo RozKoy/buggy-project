@@ -87,7 +87,11 @@ class ATVController extends Controller
     public function destroy(string $id)
     {
         $atv = BuggyPackage::findOrFail($id);
-        $atv->delete();
+        $filePath = $atv->image;    
+        if (Storage::disk('public')->exists($filePath)) {            
+            Storage::disk('public')->delete($filePath);
+        }        
+        $atv->forceDelete();
 
         return redirect()->route('admin.atv.index')->with('success', 'ATV package deleted successfully!');
     }

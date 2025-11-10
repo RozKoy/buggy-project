@@ -26,7 +26,7 @@ class UpdateBuggyPackageRequest extends FormRequest
             'spec' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10480',
         ];
     }
 }

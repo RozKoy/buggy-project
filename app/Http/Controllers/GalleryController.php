@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -22,7 +23,7 @@ class GalleryController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:10480'
         ]);
 
         if ($request->hasFile('image')) {
@@ -41,7 +42,12 @@ class GalleryController extends Controller
     public function destroy(string $id)
     {
         $gallery = Gallery::findOrFail($id);
-        $gallery->delete();
+        
+        $filePath = $gallery->image;    
+        if (Storage::disk('public')->exists($filePath)) {            
+            Storage::disk('public')->delete($filePath);
+        }        
+        $gallery->forceDelete();
 
         return redirect()->route('admin.gallery.index')->with('success', 'Image deleted successfully!');
     }

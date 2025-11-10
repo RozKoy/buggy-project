@@ -7,6 +7,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/dashboard', function () {
             return view('admin.dashboard.index');
         })->name('dashboard');
+        require __DIR__ . '/profile.php';
         require __DIR__ . '/buggy-packages.php';
         require __DIR__ . '/gallery.php';
     });

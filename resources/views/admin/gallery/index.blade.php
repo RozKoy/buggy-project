@@ -48,10 +48,10 @@
   </x-card>
   <!-- Main modal -->
   <div id="default-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
-    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-screen bg-opacity-75">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
       <!-- Modal content -->
-      <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+      <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700 w-[500px] -ml-[100px]">
         <form method="POST" action="{{ route('admin.gallery.store') }}" enctype="multipart/form-data">
           @csrf
           <!-- Modal header -->
@@ -75,7 +75,7 @@
           <div class="p-4 md:p-5 space-y-4 w-full">
             <div class="mb-6">
               <x-label for="image">Image</x-label>
-              <x-input-field type="file" id="image" name="image" required />
+              <x-input-field type="file" id="image" name="image" required style="padding: 0;"/>
               <x-input-error :messages="$errors->get('image')" class="mt-2" />
             </div>
           </div>
@@ -89,3 +89,14 @@
     </div>
   </div>
 @endsection
+@push('js')
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = new Modal(document.getElementById('default-modal'));
+    initFlowbite();    
+    if ("{{!empty($errors->get('image'))}}") {
+      modal.show();
+    }
+  });
+</script>
+@endpush

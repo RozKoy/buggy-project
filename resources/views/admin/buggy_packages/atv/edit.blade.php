@@ -5,28 +5,28 @@
       ['title' => 'ATV', 'url' => '/atv'],
       ['title' => 'Edit', 'url' => null],
   ]" />
-  <x-form id="submit_form" header="Add UTV" action="{{ route('admin.atv.update', $atv->id) }}">
+  <x-form id="submit_form" header="Add ATV" action="{{ route('admin.atv.update', $atv->id) }}">
     <div class="mb-6">
       <x-label for="image">Package Image</x-label>
-      <x-input-field type="file" id="image" name="image" />
+      <x-input-field type="file" id="image" name="image" style="padding: 0"/>
       <x-input-error :messages="$errors->get('image')" class="mt-2" />
     </div>
     <div class="mb-6">
       <x-label for="name">Package Name</x-label>
-      <x-input-field type="text" id="name" name="name" placeholder="SINGLE UTV..."
+      <x-input-field type="text" id="name" name="name" placeholder="SINGLE ATV..."
         value="{{ old('name', $atv->name) }}" required />
       <x-input-error :messages="$errors->get('name')" class="mt-2" />
     </div>
     <div class="mb-6">
       <x-label for="spec">Specification</x-label>
-      <x-input-field type="text" id="spec" name="spec" placeholder="Two rides, one UTV..."
+      <x-input-field type="text" id="spec" name="spec" placeholder="Two rides, one ATV..."
         value="{{ old('spec', $atv->spec) }}" />
       <x-input-error :messages="$errors->get('spec')" class="mt-2" />
     </div>
     <div class="mb-6">
       <x-label for="description_editor">Description</x-label>
       <div id="description_editor">
-        <b>SINGLE UTV</b> <span>: 1 UTV for one person...</span>
+        <b>SINGLE ATV</b> <span>: 1 ATV for one person...</span>
       </div>
       <x-input-field type="hidden" id="description" name="description" />
       <x-input-error :messages="$errors->get('description')" class="mt-2" />

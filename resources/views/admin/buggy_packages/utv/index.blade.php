@@ -18,7 +18,7 @@
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
             </svg>
           </div>
-          <x-input-field type="text" id="search" name="search" placeholder="Search..." class="py-3 pl-9 pr-3"
+          <x-input-field type="text" id="search" name="search" placeholder="Search..." class="py-3 pl-8 pr-3"
             value="{{ $search }}" />
           <x-button type="submit" size="sm" class="absolute top-2 right-3">Search</x-button>
         </div>

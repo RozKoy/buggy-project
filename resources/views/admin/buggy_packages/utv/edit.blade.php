@@ -8,7 +8,7 @@
   <x-form id="submit_form" header="Add UTV" action="{{ route('admin.utv.update', $utv->id) }}">
     <div class="mb-6">
       <x-label for="image">Package Image</x-label>
-      <x-input-field type="file" id="image" name="image" />
+      <x-input-field type="file" id="image" name="image" style="padding: 0" />
       <x-input-error :messages="$errors->get('image')" class="mt-2" />
     </div>
     <div class="mb-6">
