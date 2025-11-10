@@ -11,7 +11,7 @@ class LandingController extends Controller
     public function home()
     {
         $packages = BuggyPackage::query()->latest()->limit(6)->get();
-        $galleries = Gallery::query()->latest()->limit(6)->get();
+        $galleries = Gallery::query()->latest()->limit(8)->get();
 
         return view('guest.home.index', [
             'packages' => $packages,
@@ -42,7 +42,7 @@ class LandingController extends Controller
         $phone_number = env('APP_PHONE_NUMBER');
 
         $package = BuggyPackage::findOrFail($id);
-        $galleries = Gallery::query()->latest()->limit(6)->get();
+        $galleries = Gallery::query()->latest()->limit(8)->get();
 
         return view('guest.detail_package.index', [
             'package' => $package,

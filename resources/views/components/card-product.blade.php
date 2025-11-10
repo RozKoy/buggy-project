@@ -11,8 +11,7 @@
 @endphp
 <div {{ $attributes->merge(['class' => "relative w-[353px] h-[252px] lg:w-[403px] lg:h-[302px] xl:w-[606px] xl:h-[404px] overflow-hidden mb-8 $type_card"]) }}>
     <img src="{{ $img }}" alt="{{ $alt_img }}" class="w-full object-cover" loading="lazy">
-    <div class="absolute h-1/2 bottom-0 p-10 text-white bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)] w-full"></div>
-    <div class="absolute bottom-0 p-8 lg:p-10 text-white bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)] w-full">
+    <div class="absolute bottom-0 p-8 lg:p-10 text-white bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,1),rgba(0,0,0,1))] w-full">
         <h3 class="text-base md:text-lg font-bold">{{ $title }}</h3>
         <div class="flex flex-wrap items-center justify-between">
             <p class="text-sm md:text-base w-full lg:w-3/5 text-gray-200 mt-1">

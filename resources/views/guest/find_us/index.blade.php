@@ -17,7 +17,7 @@
             <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center">
                 Find us at our exciting off-road locations and experience the thrill of nature with our expert team!
             </p>
-            <div class="mx-auto bg-black rounded-2xl flex flex-wrap justify-center gap-10 p-5 md:p-10 my-5 md:my-10 text-white shadow">
+            <a href="https://maps.app.goo.gl/FeTCvRUkwM8QP4nbA" target="_blank" class="mx-auto bg-black hover:bg-opacity-75 rounded-2xl flex flex-wrap justify-center gap-10 p-5 md:p-10 my-5 md:my-10 text-white shadow transition">
                 <img src="{{ asset('media/general/logo.svg') }}" alt="Logo" class="w-52" />
                 <div class="flex flex-col justify-between gap-5">
                     <p class="text-xl md:text-2xl lg:text-3xl font-semibold">
@@ -32,8 +32,8 @@
                         +6285337284090
                     </p>
                 </div>
-            </div>
-            <div class="mx-auto bg-[#985D2F] rounded-2xl flex flex-wrap justify-center gap-10 p-5 md:p-10 my-5 md:my-10 text-white shadow">
+            </a>
+            <a href="https://maps.app.goo.gl/nEU3Le54vohE6QdS8" target="_blank" class="mx-auto bg-[#985D2F] hover:bg-opacity-75 rounded-2xl flex flex-wrap justify-center gap-10 p-5 md:p-10 my-5 md:my-10 text-white shadow transition">
                 <img src="{{ asset('media/general/logo.png') }}" alt="Logo" class="w-52" />
                 <div class="flex flex-col justify-between gap-5">
                     <p class="text-xl md:text-2xl lg:text-3xl font-semibold">
@@ -48,7 +48,7 @@
                         +6282237676603
                     </p>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 @endsection

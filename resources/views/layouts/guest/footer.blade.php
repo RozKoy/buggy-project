@@ -68,33 +68,37 @@
         <div class="flex flex-col items-center gap-3 sm:gap-6 mt-8 md:mt-12">
             <h3 class="font-semibold text-2xl sm:text-3xl xl:text-4xl text-[#C8A565]">Follow Us</h3>
             <ul class="space-y-2 md:space-y-3 font-bold text-sm sm:text-base lg:text-lg xl:text-xl">
-                <li class="flex justify-between items-center gap-3 xl:gap-4">
-                    <span>
-                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <rect width="30" height="30" fill="url(#pattern0_631_1349)" />
-                            <defs>
-                                <pattern id="pattern0_631_1349" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                    <use xlink:href="#image0_631_1349" transform="scale(0.0111111)" />
-                                </pattern>
-                                <image id="image0_631_1349" width="90" height="90" preserveAspectRatio="none" xlink:href="data:image/png;base64,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" />
-                            </defs>
-                        </svg>
-                    </span>
-                    <span>@buggybaliadventure</span>
+                <li>
+                    <a href="https://www.instagram.com/buggybaliadventure" target="_blank" rel="noopener noreferrer" class="flex justify-between items-center gap-3 xl:gap-4 hover:text-[#C8A565] transition">
+                        <span>
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="30" height="30" fill="url(#pattern0_631_1349)" />
+                                <defs>
+                                    <pattern id="pattern0_631_1349" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_631_1349" transform="scale(0.0111111)" />
+                                    </pattern>
+                                    <image id="image0_631_1349" width="90" height="90" preserveAspectRatio="none" xlink:href="data:image/png;base64,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" />
+                                </defs>
+                            </svg>
+                        </span>
+                        <span>@buggybaliadventure</span>
+                    </a>
                 </li>
-                <li class="flex justify-between items-center gap-3 xl:gap-4">
-                    <span>
-                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <rect width="30" height="30" fill="url(#pattern0_631_1350)" />
-                            <defs>
-                                <pattern id="pattern0_631_1350" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                    <use xlink:href="#image0_631_1350" transform="scale(0.0111111)" />
-                                </pattern>
-                                <image id="image0_631_1350" width="90" height="90" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEq0lEQVR4nO2cTYgcVRDHR/Fbj36AehT8IKBBouhBvQgqihGNEY1Gp6t6RRIlV0X24MGDV0FXBWWmqhfWk5cVRBiRTNebYTER/MQPIoh6kDXuKijRtNTkwyXZ19vTM929M11/qNtMvarf1Lyu7vf6NRomk8lkMplMJpPJZDKZTKZG5+3d5wnjc46wJ4x/OMZkGk00NwInFD67uLj33FIhuzZc6Qg/rRqCKx06HNTcS6vkOkJ2a2CXUtmD6WITJOwqtDiCvYWD1jm56kRd5VWNUgJoWK06UVe1EawWD7rqJHlzmIFmA51Mk9UStBCgL15haBloHo/FHII3XsJ9BpqLB92NmlsNNI/JCIK0mIXxgIHm4kH32uFuA81jsDY202JOksYZQhAbaC4WtKrL4TWOYdlAc7GgVdIO7nAEfxlozmdC8GTW+Hsc3iIEPxtoLha0an/UvFwIIyE8aqC5ONAn1G/jNkfwZp65u1G0qobq1jFt30bJaWkuPNu1Zq4XCnYKw58Gmn0GT4wvv2zVPa7xUgKZLNDxwr7zh8vPQCd5QAvja53O7FnZ8zPQic8kCnb54hWGz/VRaTI7e2a2/Ax0khf04DOM7x5s7bpw4/wMdDIK6OOwv4oZb0/Pr76gV4TxO2H8zfeZmOGxLKBPGuEHjsPtuhmolqCF8Kgw9B3D8z2CG5bmwgvWjPvS2ED/X+G6Z3C/ML4lDK+oZX0WMrGgheFDx3Bjyrhe0D0KH80DehQrDPCahMccNCzHHNyXYVwDPYJ9I/PBtRnH9YIWxkd83zPQBN8ucXjxEOMa6By20m81tww5rh80BTt936s3aMLHc4xroIeE/MlGt8O6mNrjcIdjeM8R/nIMJv5toIewOArv2nj1Y7gV6ziCh33+aglaGH5Kq2aJgssc46HhfzwDfcpfHF5P9U3wfh6/Os34fNYStONwu89vj8Lb8vo10KdYN2pu9QPBV3P7bsNDfr91BN16+lKvX4JuXr/C+KDPby1BL6a8nzcSEIL7vfESfFk70C7lrVNH8FFevzEHN/njhR9rB7rfxm1evwQv56zmVd9K92cLO85xBEdqB7qX8jhTn30Iw785/L5R9m7/TQ9aCKM037rSMZQ/hl/1JsfvL3yxpqDhsP6dfb51Chji9nulO4+3bhDrUi1BuwzbtxS2bjxMm0b0Xex+u3l1mh+9HoyyW3QKQOOh9VafTwPVam4ZXCC1GyH8Qvts3XUkUXBnxjg7RUGeFNCJrnIXGWOvDQ8UCXlyQBP+IxzcU0R8OqWk7QGpF2geVPWya89cN87YPl546hIh/LpoyBMGGrU9+71HcO844jrWh+P3ZUCeONBuMI3AEWF8IcsFcj3pQoK+WqHtXlmQJxM0n6zuH7T1S+uzTweMdw9O7ioR8MSDdieAExx2BPN6uy5ReHP8zswVupG8s/DMRXEruEqf1DnGuXG8wlZr0G5CzECzgU6myYoHbcexJdqWlgDaDhiUMg4Y1FNnq07UVW97CgetC6xV9a5uE5geG5S11x9ZushaR9jCeED7+kaZ0srWU2d1vprqCyTB6vFVnz2lVbLJZDKZTCaTyWQymUwmU2Nz6z++XKzToUX5GQAAAABJRU5ErkJggg==" />
-                            </defs>
-                        </svg>
-                    </span>
-                    <span>@buggybaliadventure</span>
+                <li>
+                    <a href="https://www.tiktok.com/@buggybaliadventure" target="_blank" rel="noopener noreferrer" class="flex justify-between items-center gap-3 xl:gap-4 hover:text-[#C8A565] transition">
+                        <span>
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect width="30" height="30" fill="url(#pattern0_631_1350)" />
+                                <defs>
+                                    <pattern id="pattern0_631_1350" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0_631_1350" transform="scale(0.0111111)" />
+                                    </pattern>
+                                    <image id="image0_631_1350" width="90" height="90" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEq0lEQVR4nO2cTYgcVRDHR/Fbj36AehT8IKBBouhBvQgqihGNEY1Gp6t6RRIlV0X24MGDV0FXBWWmqhfWk5cVRBiRTNebYTER/MQPIoh6kDXuKijRtNTkwyXZ19vTM929M11/qNtMvarf1Lyu7vf6NRomk8lkMplMJpPJZDKZTKZG5+3d5wnjc46wJ4x/OMZkGk00NwInFD67uLj33FIhuzZc6Qg/rRqCKx06HNTcS6vkOkJ2a2CXUtmD6WITJOwqtDiCvYWD1jm56kRd5VWNUgJoWK06UVe1EawWD7rqJHlzmIFmA51Mk9UStBCgL15haBloHo/FHII3XsJ9BpqLB92NmlsNNI/JCIK0mIXxgIHm4kH32uFuA81jsDY202JOksYZQhAbaC4WtKrL4TWOYdlAc7GgVdIO7nAEfxlozmdC8GTW+Hsc3iIEPxtoLha0an/UvFwIIyE8aqC5ONAn1G/jNkfwZp65u1G0qobq1jFt30bJaWkuPNu1Zq4XCnYKw58Gmn0GT4wvv2zVPa7xUgKZLNDxwr7zh8vPQCd5QAvja53O7FnZ8zPQic8kCnb54hWGz/VRaTI7e2a2/Ax0khf04DOM7x5s7bpw4/wMdDIK6OOwv4oZb0/Pr76gV4TxO2H8zfeZmOGxLKBPGuEHjsPtuhmolqCF8Kgw9B3D8z2CG5bmwgvWjPvS2ED/X+G6Z3C/ML4lDK+oZX0WMrGgheFDx3Bjyrhe0D0KH80DehQrDPCahMccNCzHHNyXYVwDPYJ9I/PBtRnH9YIWxkd83zPQBN8ucXjxEOMa6By20m81tww5rh80BTt936s3aMLHc4xroIeE/MlGt8O6mNrjcIdjeM8R/nIMJv5toIewOArv2nj1Y7gV6ziCh33+aglaGH5Kq2aJgssc46HhfzwDfcpfHF5P9U3wfh6/Os34fNYStONwu89vj8Lb8vo10KdYN2pu9QPBV3P7bsNDfr91BN16+lKvX4JuXr/C+KDPby1BL6a8nzcSEIL7vfESfFk70C7lrVNH8FFevzEHN/njhR9rB7rfxm1evwQv56zmVd9K92cLO85xBEdqB7qX8jhTn30Iw785/L5R9m7/TQ9aCKM037rSMZQ/hl/1JsfvL3yxpqDhsP6dfb51Chji9nulO4+3bhDrUi1BuwzbtxS2bjxMm0b0Xex+u3l1mh+9HoyyW3QKQOOh9VafTwPVam4ZXCC1GyH8Qvts3XUkUXBnxjg7RUGeFNCJrnIXGWOvDQ8UCXlyQBP+IxzcU0R8OqWk7QGpF2geVPWya89cN87YPl546hIh/LpoyBMGGrU9+71HcO844jrWh+P3ZUCeONBuMI3AEWF8IcsFcj3pQoK+WqHtXlmQJxM0n6zuH7T1S+uzTweMdw9O7ioR8MSDdieAExx2BPN6uy5ReHP8zswVupG8s/DMRXEruEqf1DnGuXG8wlZr0G5CzECzgU6myYoHbcexJdqWlgDaDhiUMg4Y1FNnq07UVW97CgetC6xV9a5uE5geG5S11x9ZushaR9jCeED7+kaZ0srWU2d1vprqCyTB6vFVnz2lVbLJZDKZTCaTyWQymUwmU2Nz6z++XKzToUX5GQAAAABJRU5ErkJggg==" />
+                                </defs>
+                            </svg>
+                        </span>
+                        <span>@buggybaliadventure</span>
+                    </a>
                 </li>
             </ul>
         </div>
