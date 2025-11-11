@@ -7,7 +7,7 @@
 
         <nav class="hidden lg:flex items-center gap-6 xl:gap-10">
             <a href="{{ route('utv-packages') }}" class="hover:text-white transition">UTV Packages</a>
-            <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a>
+            {{-- <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a> --}}
             <a href="{{ route('gallery') }}" class="hover:text-white transition">Gallery</a>
             <a href="{{ route('about-us') }}" class="hover:text-white transition">About Us</a>
         </nav>
@@ -23,7 +23,7 @@
 
         <nav x-show="open" x-transition class="lg:hidden w-full flex flex-col items-center gap-4 mt-4 p-4 rounded-lg backdrop-blur">
             <a href="{{ route('utv-packages') }}" class="hover:text-white transition">UTV Packages</a>
-            <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a>
+            {{-- <a href="{{ route('activity-packages') }}" class="hover:text-white transition">Activity Packages</a> --}}
             <a href="{{ route('gallery') }}" class="hover:text-white transition">Gallery</a>
             <a href="{{ route('about-us') }}" class="hover:text-white transition">About Us</a>
             <a href="{{ route('find-us') }}" class="group flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-10 py-0.5 sm:py-1 xl:py-2 border-2 border-[#C8A565] hover:border-white rounded-[50%] font-medium text-sm sm:text-base lg:text-lg xl:text-xl hover:text-white transition">

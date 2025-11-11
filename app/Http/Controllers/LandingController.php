@@ -10,8 +10,8 @@ class LandingController extends Controller
 {
     public function home()
     {
-        $packages = BuggyPackage::query()->latest()->limit(6)->get();
-        $galleries = Gallery::query()->latest()->limit(8)->get();
+        $packages = BuggyPackage::query()->where('type', 1)->oldest()->limit(6)->get();
+        $galleries = Gallery::query()->oldest()->limit(8)->get();
 
         return view('guest.home.index', [
             'packages' => $packages,
@@ -21,7 +21,7 @@ class LandingController extends Controller
 
     public function utv()
     {
-        $packages = BuggyPackage::query()->where('type', 1)->latest()->get();
+        $packages = BuggyPackage::query()->where('type', 1)->oldest()->get();
 
         return view('guest.utv_packages.index', [
             'packages' => $packages,
@@ -30,7 +30,7 @@ class LandingController extends Controller
 
     public function atv()
     {
-        $packages = BuggyPackage::query()->where('type', 2)->latest()->get();
+        $packages = BuggyPackage::query()->where('type', 2)->oldest()->get();
 
         return view('guest.activity_packages.index', [
             'packages' => $packages,
@@ -41,8 +41,8 @@ class LandingController extends Controller
     {
         $phone_number = env('APP_PHONE_NUMBER');
 
-        $package = BuggyPackage::findOrFail($id);
-        $galleries = Gallery::query()->latest()->limit(8)->get();
+        $package = BuggyPackage::whereKey($id)->where('type', 1)->firstOrFail();
+        $galleries = Gallery::query()->oldest()->limit(8)->get();
 
         return view('guest.detail_package.index', [
             'package' => $package,
@@ -53,7 +53,7 @@ class LandingController extends Controller
 
     public function gallery()
     {
-        $galleries = Gallery::latest()->get();
+        $galleries = Gallery::oldest()->get();
 
         return view('guest.galleries.index', [
             'galleries' => $galleries,

@@ -8,7 +8,7 @@
                 <br />
                 <span class="text-[#C8A565]">Buggy</span> Ride
             </h1>
-            <a href="#book" class="bg-[#162818] rounded-3xl font-semibold hover:bg-green-700 px-10 sm:px-20 md:px-28 lg:px-32 xl:px-36 py-2 md:py-3 lg:py-4 xl:py-5 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl transition shadow-[inset_0_8px_5px_-4px_rgba(255,255,255,0.75)]">
+            <a href="{{ route('utv-packages') }}" class="bg-[#162818] rounded-3xl font-semibold hover:bg-green-700 px-10 sm:px-20 md:px-28 lg:px-32 xl:px-36 py-2 md:py-3 lg:py-4 xl:py-5 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl transition shadow-[inset_0_8px_5px_-4px_rgba(255,255,255,0.75)]">
                 BOOK NOW
             </a>
         </div>
