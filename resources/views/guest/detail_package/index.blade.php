@@ -1,5 +1,46 @@
 @extends('layouts.guest.app')
 
+@php
+    $faqs = [
+        [
+            "q" => "What is the minimum age to join the Buggy Adventure?",
+            "a" => "The minimum age to drive is 17 years old (must have driving skills), while passengers can join from 6 years old.",
+        ],
+        [
+            "q" => "What should I bring for the Buggy ride?",
+            "a" => "Comfortable clothes (that you don’t mind getting muddy), sunglasses, and sunscreen.",
+        ],
+        [
+            "q" => "Do I need a driving license?",
+            "a" => "The minimum age to drive is 17 years old (must have driving skills), while passengers can join from 6 years old.",
+        ],
+        [
+            "q" => "How long is the track and what can I expect?",
+            "a" => "Our private track is about 7 km with exciting routes: Crocodile Cave, Water Pits, Rice Fields, Mud, Circuit, Fun Speed, and Jungle.",
+        ],
+        [
+            "q" => "Is insurance included?",
+            "a" => "Yes, insurance coverage is included for all participants aged 6-60 years old.",
+        ],
+        [
+            "q" => "Can beginners join the Buggy Adventure?",
+            "a" => "Yes! Our buggy is fully automatic, and professional guides will give you a safety briefing before the ride.",
+        ],
+        [
+            "q" => "What happens if it rains?",
+            "a" => "The ride is still safe and fun in light rain (even more exciting with mud!). For heavy rain or unsafe conditions, the trip may be rescheduled.",
+        ],
+        [
+            "q" => "How far is the distance between the UTV and rafting locations, and how do we get there?",
+            "a" => "The distance between the UTV and rafting locations is about 30 minutes. You can use your private vehicle or online transportation such as Gojek or Grab to reach each location.",
+        ],
+        [
+            "q" => "If I book the package at 8-10 AM or at 11-12 PM, which activity will I do first?",
+            "a" => "If you choose 11 AM or 12 PM, you will do rafting first. If you choose 8-10 AM, you will do UTV first.",
+        ],
+    ];
+@endphp
+
 @section('content')
     <x-hero-image image="/storage/{{ $package->image }}" alt="Buggy Ride">
         <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
@@ -277,6 +318,33 @@ Thank you :)`;
                 </div>
             @endif
 
+        </div>
+
+        <div class="w-full h-1 md:h-1.5 bg-[#C8A565]"></div>
+
+        <div class="w-full max-w-screen-2xl mx-auto flex flex-col gap-6 text-black py-14 lg:py-20 px-6">
+            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-10">
+                FREQUENTLY ASK
+            </h3>
+            <div class="space-y-3">
+                @foreach ($faqs as $faq)
+                    <details class="group transition-all">
+                        <summary class="cursor-pointer p-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-all">
+                            <span class="font-medium text-sm md:text-base">
+                                {{ $faq['q'] }}
+                            </span>
+
+                            <svg class="w-5 h-5 transform transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+
+                        <div class="p-4 bg-gray-50 text-sm md:text-base text-gray-700 transition-all">
+                            {{ $faq['a'] }}
+                        </div>
+                    </details>
+                @endforeach
+            </div>
         </div>
 
     </div>

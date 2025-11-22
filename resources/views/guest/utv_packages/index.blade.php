@@ -1,7 +1,9 @@
 @extends('layouts.guest.app')
 
+@section('title', 'UTV Packages')
+
 @section('content')
-    <x-hero-image image="{{ asset('media/element/bg-utv-packages.png') }}">
+    <x-hero-image image="{{ asset('media/element/gallery.png') }}">
         <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
             <h1 class="font-extrabold text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
                 UTV Packages

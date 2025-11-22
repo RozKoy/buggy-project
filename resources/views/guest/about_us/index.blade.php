@@ -1,5 +1,7 @@
 @extends('layouts.guest.app')
 
+@section('title', 'About Us')
+
 @section('content')
     <x-hero-image image="{{ asset('media/element/about-us.png') }}" alt="Buggy Ride">
         <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">

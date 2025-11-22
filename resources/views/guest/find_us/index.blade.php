@@ -1,5 +1,7 @@
 @extends('layouts.guest.app')
 
+@section('title', 'Find Us')
+
 @section('content')
     <x-hero-image image="{{ asset('media/element/find-us.png') }}" alt="Buggy Ride">
         <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
@@ -33,7 +35,7 @@
                     </p>
                 </div>
             </a>
-            <a href="https://maps.app.goo.gl/nEU3Le54vohE6QdS8" target="_blank" class="mx-auto bg-[#985D2F] hover:bg-opacity-75 rounded-2xl flex flex-wrap justify-center gap-10 p-5 md:p-10 my-5 md:my-10 text-white shadow transition">
+            {{-- <a href="https://maps.app.goo.gl/nEU3Le54vohE6QdS8" target="_blank" class="mx-auto bg-[#985D2F] hover:bg-opacity-75 rounded-2xl flex flex-wrap justify-center gap-10 p-5 md:p-10 my-5 md:my-10 text-white shadow transition">
                 <img src="{{ asset('media/general/logo.png') }}" alt="Logo" class="w-52" />
                 <div class="flex flex-col justify-between gap-5">
                     <p class="text-xl md:text-2xl lg:text-3xl font-semibold">
@@ -48,7 +50,7 @@
                         +6282237676603
                     </p>
                 </div>
-            </a>
+            </a> --}}
         </div>
     </div>
 @endsection
