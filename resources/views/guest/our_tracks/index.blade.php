@@ -249,7 +249,7 @@
             <p class="px-0 sm:px-10 md:px-20 lg:px-32 xl:px-60 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center">
                 Experience an adrenaline filled buggy adventure that takes you through thrilling tracks and stunning natural scenery.
             </p>
-            <div class="my-20 flex flex-wrap items-start justify-center gap-y-5 gap-x-0 md:gap-x-1">
+            <div class="my-20 px-28 flex flex-wrap items-start justify-center gap-y-5 gap-x-0 md:gap-x-1">
 
                 @foreach ($steps as $item)
                     <div class="w-20 md:w-28 flex flex-col gap-1.5 items-center justify-center">
