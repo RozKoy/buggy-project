@@ -187,56 +187,47 @@
         [
             'img' => '/media/element/tracks/img-1.png',
             'title' => 'Ready for the Start?',
-            'desc' =>
-                'Your adventure begins the moment you step into our Basecamp. Following quick Registration and issuance of complete Safety Gear, our professional Guide will provide a comprehensive Safety Briefing. Learn how to conquer the tracks, master hand signals, and get ready to drive!',
+            'desc' => 'Your adventure begins the moment you step into our Basecamp. Following quick Registration and issuance of complete Safety Gear, our professional Guide will provide a comprehensive Safety Briefing. Learn how to conquer the tracks, master hand signals, and get ready to drive!',
         ],
         [
             'img' => '/media/element/tracks/img-2.png',
             'title' => 'Gravel Roads',
-            'desc' =>
-                "This track serves as the ideal warm-up. It allows you to feel the Buggy's handling, test the brakes, and adjust to the steering controls before facing the more challenging mud and jungle sections.",
+            'desc' => "This track serves as the ideal warm-up. It allows you to feel the Buggy's handling, test the brakes, and adjust to the steering controls before facing the more challenging mud and jungle sections.",
         ],
         [
             'img' => '/media/element/tracks/img-3.png',
             'title' => 'Donut Track',
-            'desc' =>
-                'This is the Freestyle Zone! Once you are comfortable driving, this track provides a unique (and safe, under guide supervision) opportunity to attempt brief spins or turning maneuvers (like a donut). It adds an element of maximum adrenaline fun that makes your photos and videos stand out.',
+            'desc' => 'This is the Freestyle Zone! Once you are comfortable driving, this track provides a unique (and safe, under guide supervision) opportunity to attempt brief spins or turning maneuvers (like a donut). It adds an element of maximum adrenaline fun that makes your photos and videos stand out.',
         ],
         [
             'img' => '/media/element/tracks/img-4.png',
             'title' => 'Jungle Track',
-            'desc' =>
-                'You will feel completely cut off from civilization. This is the authentic off-road experience. Feel the sensation as your Buggy struggles up and down slopes between the trees, providing a beautiful yet challenging cinematic backdrop.',
+            'desc' => 'You will feel completely cut off from civilization. This is the authentic off-road experience. Feel the sensation as your Buggy struggles up and down slopes between the trees, providing a beautiful yet challenging cinematic backdrop.',
         ],
         [
             'img' => '/media/element/tracks/img-5.png',
             'title' => 'Ricefield Track',
-            'desc' =>
-                'This is the "Scenic Pause". It offers a stunning contrast between the mud on your vehicle and the soothing bright green of the iconic Balinese rice fields. This track provides a perfect moment to take a breath and capture the authentic cultural beauty of Bali.',
+            'desc' => 'This is the "Scenic Pause". It offers a stunning contrast between the mud on your vehicle and the soothing bright green of the iconic Balinese rice fields. This track provides a perfect moment to take a breath and capture the authentic cultural beauty of Bali.',
         ],
         [
             'img' => '/media/element/tracks/img-6.png',
             'title' => 'Mud Track',
-            'desc' =>
-                'This is the real off-road challenge. You must exert your driving skills to maintain traction and prevent your Buggy from slipping or getting stuck. The sense of satisfaction after successfully navigating this thick, muddy track is a rewarding adrenaline rush in itself.',
+            'desc' => 'This is the real off-road challenge. You must exert your driving skills to maintain traction and prevent your Buggy from slipping or getting stuck. The sense of satisfaction after successfully navigating this thick, muddy track is a rewarding adrenaline rush in itself.',
         ],
         [
             'img' => '/media/element/tracks/img-7.png',
             'title' => 'Crocodile Cave',
-            'desc' =>
-                "This track adds an element of exploration and mystery. It's an iconic spot that gives the adventure an Indiana Jones feel. It is usually a great place to stop, admire the natural uniqueness, and take a dramatic photo.",
+            'desc' => "This track adds an element of exploration and mystery. It's an iconic spot that gives the adventure an Indiana Jones feel. It is usually a great place to stop, admire the natural uniqueness, and take a dramatic photo.",
         ],
         [
             'img' => '/media/element/tracks/img-8.png',
             'title' => 'Puddles Track',
-            'desc' =>
-                'Get ready to get soaked! This is a source of laughter and excitement. The thrill of hitting large pools of water at speed, resulting in spectacular water and mud splashes, is one of the most entertaining and Instagenic moments of the entire adventure.',
+            'desc' => 'Get ready to get soaked! This is a source of laughter and excitement. The thrill of hitting large pools of water at speed, resulting in spectacular water and mud splashes, is one of the most entertaining and Instagenic moments of the entire adventure.',
         ],
         [
             'img' => '/media/element/tracks/img-9.png',
             'title' => 'River Bathing & Natural Waterfall Oasis',
-            'desc' =>
-                'Immerse yourself in our exclusive River Bathing Area. Trade engine noise for the soothing rush of water as you float lazily down the crystal-clear river on an inner tube. Relax your muscles against the stunning backdrop of a Natural Waterfall. ',
+            'desc' => 'Immerse yourself in our exclusive River Bathing Area. Trade engine noise for the soothing rush of water as you float lazily down the crystal-clear river on an inner tube. Relax your muscles against the stunning backdrop of a Natural Waterfall. ',
         ],
     ];
 @endphp
@@ -244,8 +235,7 @@
 @section('content')
     <x-hero-image
         image="{{ asset('media/element/our-tracks.jpg') }}"
-        alt="Buggy Ride"
-    >
+        alt="Buggy Ride">
         <div class="relative my-auto flex w-full max-w-screen-2xl flex-col items-center justify-center gap-4 p-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
             <h1 class="text-center text-3xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                 OUR TRACK
@@ -276,12 +266,10 @@
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            class="w-16 text-[#C8A565] md:w-20"
-                        >
+                            class="w-16 text-[#C8A565] md:w-20">
                             <path
                                 d="M12.7055 18.9112C12.2784 18.7306 12 18.3052 12 17.8333V15H5C4.44772 15 4 14.5523 4 14V10C4 9.44772 4.44771 9 5 9H12V6.1667C12 5.69483 12.2784 5.26942 12.7055 5.08884C13.1326 4.90826 13.6241 5.00808 13.951 5.34174L19.6653 11.175C20.1116 11.6307 20.1116 12.3693 19.6653 12.825L13.951 18.6583C13.6241 18.9919 13.1326 19.0917 12.7055 18.9112Z"
-                                fill="currentColor"
-                            />
+                                fill="currentColor" />
                         </svg>
                     @endif
                 @endforeach
@@ -304,8 +292,7 @@
                     <div class="{{ $loop->iteration % 2 === 0 ? 'flex-row-reverse' : '' }} flex min-h-44 flex-wrap gap-3 border border-[#C8A565] shadow-md">
                         <div
                             class="aspect-video flex-1 bg-cover bg-center bg-no-repeat"
-                            style="background-image: url({{ $item['img'] }})"
-                        ></div>
+                            style="background-image: url({{ $item['img'] }})"></div>
                         <div class="flex flex-col gap-5 p-3 md:w-8/12 lg:w-9/12 xl:w-10/12">
                             <h5 class="text-sm font-bold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                                 {{ $item['title'] }}

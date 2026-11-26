@@ -11,13 +11,13 @@
 @endphp
 <div {{ $attributes->merge(['class' => "relative w-[353px] h-[252px] lg:w-[403px] lg:h-[302px] xl:w-[606px] xl:h-[404px] overflow-hidden mb-8 $type_card"]) }}>
     <img src="{{ $img }}" alt="{{ $alt_img }}" class="w-full object-cover" loading="lazy">
-    <div class="absolute bottom-0 p-8 lg:p-10 text-white bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,1),rgba(0,0,0,1))] w-full">
-        <h3 class="text-base md:text-lg font-bold">{{ $title }}</h3>
+    <div class="absolute bottom-0 w-full bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,1),rgba(0,0,0,1))] p-8 text-white lg:p-10">
+        <h3 class="text-base font-bold md:text-lg">{{ $title }}</h3>
         <div class="flex flex-wrap items-center justify-between">
-            <p class="text-sm md:text-base w-full lg:w-3/5 text-gray-200 mt-1">
+            <p class="mt-1 w-full text-sm text-gray-200 md:text-base lg:w-3/5">
                 {{ $description }}
             </p>
-            <a href="{{ $url }}" class="text-sm md:text-base mt-4 px-5 py-2 bg-[#C8A565] rounded-full font-semibold hover:scale-105 transition-transform">
+            <a href="{{ $url }}" class="mt-4 rounded-full bg-[#C8A565] px-5 py-2 text-sm font-semibold transition-transform hover:scale-105 md:text-base">
                 More Detail
             </a>
         </div>

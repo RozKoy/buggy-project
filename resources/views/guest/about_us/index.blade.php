@@ -4,16 +4,16 @@
 
 @section('content')
     <x-hero-image image="{{ asset('media/element/about-us.png') }}" alt="Buggy Ride">
-        <div class="w-full max-w-screen-2xl relative flex flex-col items-center justify-center p-6 my-auto gap-4 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
-            <h1 class="font-extrabold text-center text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+        <div class="relative my-auto flex w-full max-w-screen-2xl flex-col items-center justify-center gap-4 p-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
+            <h1 class="text-center text-3xl font-extrabold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                 ABOUT US
             </h1>
         </div>
     </x-hero-image>
 
     <div class="w-full bg-white">
-        <div class="w-full max-w-screen-2xl mx-auto flex flex-col gap-6 text-black py-14 lg:py-20 px-6">
-            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-10">
+        <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-6 px-6 py-14 text-black lg:py-20">
+            <h3 class="mb-10 text-center text-xl font-bold md:text-2xl lg:text-3xl">
                 BUGGY BALI ADVENTURE
             </h3>
             <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -31,15 +31,15 @@
                 Feel the adventure. Only at Buggy Bali Adventure.
             </p>
         </div>
-        <div class="w-full h-1 md:h-1.5 bg-[#C8A565]"></div>
-        <div class="w-full max-w-screen-2xl mx-auto flex flex-col gap-6 text-black py-14 lg:py-20 px-6">
-            <h3 class="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-10">
+        <div class="h-1 w-full bg-[#C8A565] md:h-1.5"></div>
+        <div class="mx-auto flex w-full max-w-screen-2xl flex-col gap-6 px-6 py-14 text-black lg:py-20">
+            <h3 class="mb-10 text-center text-xl font-bold md:text-2xl lg:text-3xl">
                 GENERAL TERM AND CONDITION
             </h3>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 1. Age and Eligibility
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Age Requirements:</span>
                     <ul class="list-disc pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -78,10 +78,10 @@
                     </ul>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 2. Health and Safety
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Safety Briefing:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -101,10 +101,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 3. Insurance
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Coverage:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -118,10 +118,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 4. Liability
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Assumption of Risk:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -135,10 +135,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 5. Booking and Payment
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Cancellation Policy:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -146,10 +146,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 6. Weather and Rescheduling
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Weather Conditions:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -157,10 +157,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 7. Equipment Use
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Responsibility:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -168,10 +168,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 8. Photography and Media
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Promotional Use:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
@@ -179,10 +179,10 @@
                     </p>
                 </li>
             </ul>
-            <p class="font-semibold text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <p class="text-sm font-semibold sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 9. Governing Law
             </p>
-            <ul class="list-disc pl-10 space-y-3 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+            <ul class="list-disc space-y-3 pl-10 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                 <li>
                     <span class="font-semibold">Jurisdiction:</span>
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">

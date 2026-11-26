@@ -20,7 +20,7 @@
     @include('layouts.admin.navbar')
     @include('layouts.admin.sidebar')
     <div class="p-4 sm:ml-64">
-        <div class="p-4 mt-14">
+        <div class="mt-14 p-4">
             @yield('content')
         </div>
     </div>

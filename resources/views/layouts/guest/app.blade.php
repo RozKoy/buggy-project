@@ -17,7 +17,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-poppins min-h-screen antialiased bg-[#162818] text-white">
+<body class="min-h-screen bg-[#162818] font-poppins text-white antialiased">
 
     @include('layouts.guest.navbar')
     @yield('content')
